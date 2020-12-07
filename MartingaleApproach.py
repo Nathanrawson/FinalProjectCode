@@ -61,10 +61,6 @@ clf = ComplementNB()
 X = X_Train[['close', 'low']].copy()
 clf.fit(X, y)
 
-
-#ik7Fv
-#D25823582
-
 print("Running")
 
 #data = con.get_candles('EUR/USD', period='m1', number=250)
@@ -139,7 +135,7 @@ def GetUpdate(con):
 s = sched.scheduler(time.time, time.sleep)
 
 def MakeTrade(sc):
-    TOKEN = '6817a5e9c93ad9c62201c9e032a0e4d4f58c0d59'
+    TOKEN = '{Your FXCM Token Here}'
     con = fxcmpy.fxcmpy(access_token=TOKEN, log_level='error', server='demo', log_file='log.txt')
 
     print("Creating Order")
